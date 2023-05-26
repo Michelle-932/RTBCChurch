@@ -1,0 +1,141 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+} 
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+:root {
+  --color-purple-main: #33032f;
+  --color-main-sub: #bfb1c1;
+  --color-main-complement: #071108;
+  --color-blue-gray: #b5bec6;
+  --color-blue-accent: #c7dbe6;
+  --color-main: #521945;
+  --color-accent: #f0dfad;
+  --color-sub-accent: #698996;
+  --color-brown: #8f5c38;
+  --color-beige: #edf0da;
+  --color-griege: #a89b8c;
+}
+
+body {
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  column-gap: 1.25rem;
+  width: 100%;
+  height: 4.25rem;
+  margin: 0 auto;
+  background-color: var(--color-main);
+}
+
+
+ul {
+  list-style-type: none;
+  display: inline-block;
+  justify-content: space-between;
+}
+
+ul li{
+  display: inline-block;
+  margin-right: auto;
+  
+}
+
+li > a{
+   color: var(--color-accent);
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  background-image: url("../img/churchhands.jpg");
+  background-position: bottom;
+  align-self: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.logo img{
+  object-fit: cover;
+  max-width: 40%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.subheadline {
+  font-size: 1.4rem;
+  text-align: center;
+  color: white;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  background-color: white;
+  text-align: center;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.intro h2{
+  font-size: 1.4rem;
+  text-align: center;
+  color: var(--color-main);
+}
+
+.introheads2 {
+  display: inline-block;
+  text-align: center;
+  padding: 3vh;
+}
+
+.introheads2 span{
+  margin-inline: 10px;
+  color: var(--color-accent);
+}
+
+
+.svc {
+  display: flex;
+  background-image: url("../img/churchhands.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--color-brown);
+  align-items: center;
+}
+
+.contact > div {
+  
+}
+
+
+
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
