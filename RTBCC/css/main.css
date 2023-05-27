@@ -7,9 +7,17 @@
   box-sizing: border-box;
 } 
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+html * {
+  font-family: Poppins, sans-serif;
+}
+
 /******************************************
 /* LAYOUT
 /*******************************************/
+
+
 
 :root {
   --color-purple-main: #33032f;
@@ -27,6 +35,8 @@
 
 body {
   margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
 }
 
 .navbar {
@@ -36,11 +46,12 @@ body {
   justify-content: flex-end;
   column-gap: 1.25rem;
   width: 100%;
-  height: 4.25rem;
+  height: 6rem;
   margin: 0 auto;
   background-color: var(--color-main);
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
 }
-
 
 ul {
   list-style-type: none;
@@ -50,13 +61,90 @@ ul {
 
 ul li{
   display: inline-block;
-  margin-right: auto;
+  margin-right: 5vw;
   
 }
 
 li > a{
    color: var(--color-accent);
+   text-decoration: none;
 }
+
+
+/* BURGER MENU */
+
+.burger {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+}
+
+.burger:hover {
+  cursor: pointer;
+}
+
+.burger-line {
+  display: block;
+  border-radius: 2px;
+  width: 40px;
+  height: 3px;
+  background-color: var(--color-accent); 
+  margin: 5px 0;
+  margin-right: 5vw;
+  transition: transform 0.3s ease-in-out;
+  transition-duration: 500ms;
+}
+
+.burger.open .line1 {
+  -webkit-transform: translateY(8px) rotate(45deg);
+  -ms-transform: translateY(8px) rotate(45deg);
+  -o-transform: translateY(8px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
+}
+
+.burger.open .line2 {
+  opacity: 0;
+}
+
+.burger.open .line3 {
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+  -ms-transform: translateY(-8px) rotate(-45deg);
+  -o-transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.menu {
+  display: none;
+  list-style: none;
+  padding: 0;
+}
+
+.menu.open {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5vh;
+  padding-top: 5vh;
+  padding-left: 3vh;
+  background-color: var(--color-main-complement);
+}
+
+.menu-item {
+  margin-bottom: 10px;
+}
+
+
+@media (min-width: 769px) {
+  .burger {
+    display: none;
+  }
+
+  .menu {
+    display: inline-block;
+  }
+}
+
+
+
 
 .hero {
   display: flex;
@@ -68,6 +156,7 @@ li > a{
   background-size: cover;
   align-items: center;
   justify-content: center;
+  font-family: 'Poppins', sans-serif;
 }
 
 
@@ -83,6 +172,8 @@ li > a{
   font-size: 1.4rem;
   text-align: center;
   color: white;
+  text-transform: uppercase;
+  padding-bottom: 3vh;
 }
 
 .intro {
@@ -93,6 +184,8 @@ li > a{
   text-align: center;
   margin-left: 5vw;
   margin-right: 5vw;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
 }
 
 .intro h2{
@@ -112,14 +205,68 @@ li > a{
   color: var(--color-accent);
 }
 
-
+/* SERVICES SECTION */
 .svc {
-  display: flex;
-  background-image: url("../img/churchhands.jpg");
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: relative; /* Required for parallax effect */
+  color: white;
+  
+  
 }
+
+.backgroundscroll {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Place the background image behind other elements */
+  /* Add your background image and parallax scrolling styles here */
+}
+
+.services {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  width: 48%; /* Adjust the width as needed */
+}
+
+.left {
+  text-align: center;
+}
+
+.right {
+  text-align: center;
+}
+
+.servicetitle {
+  text-align: center;
+}
+
+/* Additional styles for the content */
+h2 {
+  margin-top: 1.5em;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+.services span {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.clickbutton {
+  margin-top: 1em;
+}
+
+
+
+
+
+/* CONTACT SECTION */
 
 .contact {
   display: flex;
@@ -137,5 +284,30 @@ li > a{
 
 
 /******************************************
-/* ADDITIONAL STYLES
+/* MEDIA STYLES
 /*******************************************/
+
+
+/* CSS for larger screens */
+
+.services {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  width: 48%; /* Adjust the width as needed */
+}
+
+/* CSS for cell phones */
+
+@media (max-width: 600px) { /* Adjust breakpoint as needed */
+  .services {
+    flex-direction: column;
+  }
+
+  .column {
+    width: 100%; /* Columns take full width on smaller screens */
+    margin-bottom: 1.5em; /* Add some spacing between the stacked columns */
+  }
+}
