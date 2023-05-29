@@ -39,6 +39,8 @@ body {
   font-weight: 400;
 }
 
+
+
 .navbar {
   display: flex;
   flex-direction: row;
@@ -52,6 +54,12 @@ body {
   font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
 }
+
+.navbar a{
+
+}
+
+
 
 ul {
   list-style-type: none;
@@ -149,7 +157,7 @@ li > a{
 .hero {
   display: flex;
   flex-direction: column;
-  background-image: url("../img/churchhands.jpg");
+  background-image: url("../img/peacefultree.jpg");
   background-position: bottom;
   align-self: center;
   background-repeat: no-repeat;
@@ -189,7 +197,7 @@ li > a{
 }
 
 .intro h2{
-  font-size: 1.4rem;
+  font-size: 2rem;
   text-align: center;
   color: var(--color-main);
 }
@@ -203,29 +211,31 @@ li > a{
 .introheads2 span{
   margin-inline: 10px;
   color: var(--color-accent);
+  font-size: 1.4rem;
+  
 }
 
 /* SERVICES SECTION */
 .svc {
-  position: relative; /* Required for parallax effect */
+  display: flex;
+  flex-direction: column;
+  background-image: url("../img/churchhands.jpg");
+  background-attachment: fixed; /* parallax effect */
+  background-position: bottom;
+  align-self: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
   color: white;
-  
-  
-}
-
-.backgroundscroll {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* Place the background image behind other elements */
-  /* Add your background image and parallax scrolling styles here */
 }
 
 .services {
   display: flex;
   justify-content: space-between;
+  color: white;
+  margin-left: 5vh;
+  margin-right: 5vh;
 }
 
 .column {
@@ -308,6 +318,13 @@ p {
 
   .column {
     width: 100%; /* Columns take full width on smaller screens */
-    margin-bottom: 1.5em; /* Add some spacing between the stacked columns */
+    margin-bottom: 2em; /* Add some spacing between the stacked columns */
+  }
+}
+
+/* turn off parallax scrolling on cell phones */ 
+@media (max-width: 600px) {
+  .svc {
+    background-attachment: scroll;
   }
 }
