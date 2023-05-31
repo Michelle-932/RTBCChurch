@@ -11,6 +11,7 @@
 
 html * {
   font-family: Poppins, sans-serif;
+  font-size: 16px;
 }
 
 /******************************************
@@ -39,13 +40,14 @@ body {
   font-weight: 400;
 }
 
+.header {
 
+}
 
 .navbar {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: flex-end;
   column-gap: 1.25rem;
   width: 100%;
   height: 6rem;
@@ -55,27 +57,27 @@ body {
   text-transform: uppercase;
 }
 
-.navbar a{
-
-}
-
-
-
 ul {
   list-style-type: none;
-  display: inline-block;
-  justify-content: space-between;
+  
 }
 
 ul li{
   display: inline-block;
   margin-right: 5vw;
   
+  
 }
 
 li > a{
    color: var(--color-accent);
    text-decoration: none;
+}
+
+.navbar img {
+  max-height: 50px;
+  margin-right: auto;
+  margin-left: 5vh;
 }
 
 
@@ -197,7 +199,7 @@ li > a{
 }
 
 .intro h2{
-  font-size: 2rem;
+  font-size: 1.7rem;
   text-align: center;
   color: var(--color-main);
 }
@@ -212,6 +214,7 @@ li > a{
   margin-inline: 10px;
   color: var(--color-accent);
   font-size: 1.4rem;
+  text-transform: uppercase;
   
 }
 
@@ -228,14 +231,14 @@ li > a{
   align-items: center;
   justify-content: center;
   color: white;
+
 }
 
 .services {
   display: flex;
   justify-content: space-between;
   color: white;
-  margin-left: 5vh;
-  margin-right: 5vh;
+
 }
 
 .column {
@@ -244,6 +247,7 @@ li > a{
 
 .left {
   text-align: center;
+  padding-bottom: 3vh;
 }
 
 .right {
@@ -252,15 +256,25 @@ li > a{
 
 .servicetitle {
   text-align: center;
+  font-size: 2rem;
 }
 
 /* Additional styles for the content */
-h2 {
-  margin-top: 1.5em;
+.svc h1{
+  padding-top: 1.5em;
 }
 
-p {
+.services h2 {
+  padding-top: 1.5em;
+  margin-top: 1.5em;
+  font-size: 1.7rem;
+  
+}
+
+.services p {
   margin-bottom: 1em;
+  margin-left: 5vw;
+  font-size: 1.2rem;
 }
 
 .services span {
