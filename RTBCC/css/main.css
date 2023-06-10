@@ -40,8 +40,28 @@ body {
   font-weight: 400;
 }
 
-.header {
 
+/* BUTTONS */
+button {
+  background: var(--color-main);
+  border-radius: 999px;
+  box-shadow: var(--color-purple-main) 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: var(--color-accent);
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
 }
 
 .navbar {
@@ -64,15 +84,15 @@ ul {
 
 ul li{
   display: inline-block;
-  margin-right: 5vw;
-  
-  
+  margin-right: 5vw; 
 }
 
 li > a{
    color: var(--color-accent);
    text-decoration: none;
 }
+
+
 
 .navbar img {
   max-height: 50px;
@@ -102,7 +122,7 @@ li > a{
   margin: 5px 0;
   margin-right: 5vw;
   transition: transform 0.3s ease-in-out;
-  transition-duration: 500ms;
+  transition-duration: 300ms;
 }
 
 .burger.open .line1 {
@@ -151,6 +171,18 @@ li > a{
   .menu {
     display: inline-block;
   }
+
+  li > a:hover {
+    color: var(--color-main);
+  }
+   
+  .menu-item > a:hover {
+    background-color: var(--color-accent);
+    padding: 24px 0px;
+    transition: 0.3ms;
+  }
+
+
 }
 
 
@@ -168,6 +200,8 @@ li > a{
   justify-content: center;
   font-family: 'Poppins', sans-serif;
 }
+
+
 
 
 .logo img{
@@ -218,7 +252,9 @@ li > a{
   
 }
 
-/* SERVICES SECTION */
+/******************************************
+/* SERVICES SECTION
+/*******************************************/
 .svc {
   display: flex;
   flex-direction: column;
@@ -266,15 +302,18 @@ li > a{
 
 .services h2 {
   padding-top: 1.5em;
+  padding-bottom: 0.8em;
   margin-top: 1.5em;
   font-size: 1.7rem;
   
 }
 
 .services p {
+  line-height: 1.5;
   margin-bottom: 1em;
   margin-left: 5vw;
   font-size: 1.2rem;
+  
 }
 
 .services span {
@@ -287,10 +326,81 @@ li > a{
 }
 
 
+/******************************************
+/* GIVING PAGE STYLES
+/*******************************************/
+
+.giving {
+  background-image: url("../img/givingheroimg.jpg");
+  height: 65vh;
+  margin-bottom: 10vh;
+}
 
 
 
-/* CONTACT SECTION */
+
+.givingway {
+  margin-bottom: 40px;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  overflow: hidden;
+}
+
+.tithesleft,
+.givingleft,
+.benevolenceleft {
+  float: left;
+  margin-right: 70px;
+  max-width: 500px;
+}
+
+.tithesleft img,
+.givingleft img,
+.benevolenceleft img {
+  max-width: 100%;
+  height: auto;
+}
+
+.tithesright,
+.givingright,
+.benevolenceright {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tithesright h2,
+.givingright h2,
+.benevolenceright h2 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--color-main);
+  text-align: center;
+  margin-bottom: 2vh;
+}
+
+.tithesright p,
+.givingright p,
+.benevolenceright p {
+  line-height: 1.5;
+  color: var(--color-main);
+  text-align: left;
+}
+
+.tithesright button,
+.givingright button,
+.benevolenceright button {
+  margin-top: 10px;
+  
+}
+
+
+
+/******************************************
+/* CONTACT SECTION
+/*******************************************/
 
 .contact {
   display: flex;
@@ -334,11 +444,19 @@ li > a{
     width: 100%; /* Columns take full width on smaller screens */
     margin-bottom: 2em; /* Add some spacing between the stacked columns */
   }
-}
 
-/* turn off parallax scrolling on cell phones */ 
-@media (max-width: 600px) {
   .svc {
     background-attachment: scroll;
+  }
+
+}
+
+@media (max-width: 769px) {
+  .tithesleft,
+  .givingleft,
+  .benevolenceleft {
+    float: none;
+    margin-right: 0;
+    margin-bottom: 20px;
   }
 }
