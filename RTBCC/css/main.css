@@ -64,6 +64,13 @@ button {
   border: 0;
 }
 
+.pagetitle h1 {
+  font-weight: 700;
+  font-size: 3em;
+  color: white;
+  text-transform: uppercase;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -332,12 +339,9 @@ li > a{
 
 .giving {
   background-image: url("../img/givingheroimg.jpg");
-  height: 65vh;
+  height: 500px;
   margin-bottom: 10vh;
 }
-
-
-
 
 .givingway {
   margin-bottom: 40px;
@@ -396,6 +400,22 @@ li > a{
   
 }
 
+/******************************************
+/* BIBLE STUDY PAGE STYLES
+/*******************************************/
+
+.bible {
+  background-image: url("../img/biblestudy.jpg");
+  height: 500px;
+  margin-bottom: 10vh;
+}
+
+.biblesections {
+  margin-bottom: 40px;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  overflow: hidden;
+}
 
 
 /******************************************
