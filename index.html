@@ -27,11 +27,13 @@
 				</div>
 				<ul class="menu" id="menu">
 					<li class="menu-item"><a href="#" class="menu-link">Home</a></li>
-					<li class="menu-item"><a href="#" class="menu-link">Auxilliaries</a></li>
-					<li class="menu-item"><a href="#" class="menu-link">Bible Study</a></li>
-					<li class="menu-item"><a href="#" class="menu-link">News</a></li>
-					<li class="menu-item"><a href="#" class="menu-link">Giving</a></li>
-					<li class="menu-item"><a href="#" class="menu-link">Contact Us</a></li>
+					<li class="menu-item"><a href="#services" class="menu-link">Services</a></li>
+					<li class="menu-item"><a href="#media" class="menu-link">Sermons</a></li>
+					
+					<li class="menu-item"><a href="#giving" class="menu-link">Giving</a></li>
+					<li class="menu-item"><a href="#bible" class="menu-link">Bible Study</a></li>
+
+					<li class="menu-item"><a href="#contact" class="menu-link">Contact Us</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -73,7 +75,7 @@
 			</div>
 		</section>
 
-		<container class="svc">
+		<section class="svc" id="services">
 			
 			<h1 class="servicetitle">SERVICE TIMES AND LOCATION</h1>
 
@@ -98,27 +100,118 @@
 					<button class="clickbutton">Dial In</button>
 				</div>
 			</div>
-		</container>
-
-		<section class="media">
-			<h1>MEDIA & SERMONS</h1>
-			<button>listen now</button>
-			<h2>Music Inspiration</h2>
-			<img class="youtube">
-			<img class="clickbutton">
 		</section>
 
-		<section class="contact">
-			<h1>contact us</h1>
-			<div class="phone">
-				<img href="/img/phone.png">
-				<h2 class="contacttitles">phone</h2>
-				<p>209.555.1212</p>
+		<section class="media" id="media">
+			<h1>MEDIA & SERMONS</h1>
+			<p>Our pastor delivers a dynamic sermon every Sunday. Listen to the recordings below. </p>
+			<div class="mediabuttons">
+				<button>listen now</button>
+				<button>watch latest</button>
 			</div>
-			<div class="address">
-				<img href="/img/map.png">
-				<h2 class="contacttitles">address</h2>
-				<p>Tracy, California</p>
+
+			<h2>Music Inspiration</h2>
+			<p>Our music inspiration for the week is our secretary's favorite song!</p>
+			<div class="weeklysong"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6Erpt1x0P0ANKKdZZdfAd8?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+			
+		</section>
+
+		<section class="givingways" id="giving">
+
+			<h1 class="givingtitle">WAYS TO GIVE</h1>
+
+            <div class="givingway">
+              <div class="tithesleft">
+                <img src="img/wheatfield.jpg">
+              </div>
+              <div class="tithesright">
+                <h2>tithe & general offering</h2>
+                <p>We believe that our tithe and offerings are an act of worship. We give because God gave first. The word "tithe" means "tenth" and it is a way of honoring God with the first 10% of our income. In addition to tithing, we also give general offerings to the Lord. General offerings are given above the tithe and represent free-will offerings.</p>
+                <button>tithe</button>
+              </div>
+            </div>
+          
+            <div class="givingway">
+              <div class="givingleft">
+                <img src="img/peopletexting.jpg">
+              </div>
+              <div class="givingright">
+                <h2>Text to Give</h2>
+                <p>Text-to-give is a seamless and efficient way to give tithes and offerings. Text RBCC to this number.</p>
+                <p>When you receive a reply, click the link. Select your amount, the fund, and the frequency and complete your giving. At church or on-the-go, text-giving is easy and convenient.</p>
+                <p>The first time you text to give you will be asked to set up your account information. This will only be necessary once.</p>
+                <button>text</button>
+              </div>
+            </div>
+          
+            <div class="givingway">
+              <div class="benevolenceleft">
+                <img src="img/handsplash.jpg">
+              </div>
+              <div class="benevolenceright">
+                <h2>Benevolence Giving</h2>
+                <p>We believe the church exists not only to meet its own needs but also to reach out and meet the needs of those inside and outside of the church. Our Benevolence giving helps aid people who are disadvantaged or in crisis situations.</p>
+                <button>give</button>
+              </div>
+            </div>
+        </section>
+
+		<section class="dailyverse" id="bible">
+            <div class="todayverse">
+              <h1 class="bibletitle">BIBLE STUDY</h1>
+              <p>This is the verse for today.</p>
+			  <p>Attribution</p>
+              <label for="date">Select a Different Date:</label>
+              <input type="date" id="date" value="current" />
+            </div>
+        </section>
+
+        <section class="biblestudy">
+            <div class="biblesections">
+                <div class="givingleft">
+                  <img src="img/zoomexample.jpg">
+                </div>
+                <div class="givingright">
+                  <h2>Listen In</h2>
+                  <p>Our Bible studies are online-only on Wednesdays at 7pm Pacific Time. Click the button below to join us.</p>
+                  <button>Join Us</button>
+                </div>
+              </div>
+        </section>
+          
+        <section class="prayerrequest" id="prayer">
+            <div class="biblesections">
+                <div class="givingleft">
+                  <img src="img/prayer.jpg">
+                </div>
+                <div class="givingright">
+                  <h2>Prayer Requests</h2>
+                  <p>Going through a difficult time? Click below to submit a confidential prayer request.</p>
+                  <button>Pray With Us</button>
+                </div>
+              </div>
+        </section>
+
+
+		<section class="contact" id="contact">
+			<h1 class="contacttitle">CONTACT US</h1>
+
+			<div class="contactways">
+				<div class="phone">
+					<img src="/img/phone.png">
+					<h2 class="contacttitles">Phone</h2>
+					<p>209.555.1212</p>
+				</div>
+				<div class="address">
+					<img src="/img/map.png">
+					<h2 class="contacttitles">Address</h2>
+					<p>Tracy, California</p>
+				</div>
+				<div class="facebook">
+					<img src="/img/fblogowhite.png">
+					<h2 class="contacttitles">Facebook</h2>
+					<p>Visit our page</p>
+				</div>
 			</div>
 		</section>
 		</main>
@@ -129,10 +222,6 @@
 			</div>
 			<div class="logo2">
 				<img>
-			</div>
-			<div class="socials">
-				<span>f t i</span>
-				<img class="to top">
 			</div>
 		</footer>
 

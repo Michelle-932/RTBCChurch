@@ -160,8 +160,8 @@ li > a{
   display: flex;
   flex-direction: column;
   margin-top: 5vh;
-  padding-top: 5vh;
-  padding-left: 3vh;
+  padding-top: 1.5vh;
+  padding-left: 1vw;
   background-color: var(--color-main-complement);
 }
 
@@ -192,7 +192,9 @@ li > a{
 
 }
 
-
+/******************************************
+/* HERO SECTION
+/*******************************************/
 
 
 .hero {
@@ -253,11 +255,20 @@ li > a{
 
 .introheads2 span{
   margin-inline: 10px;
-  color: var(--color-accent);
-  font-size: 1.4rem;
+  color: #c9ae5d;
+  font-size: 1.15rem;
   text-transform: uppercase;
   
 }
+
+@media (max-width: 1068px) {
+  .introheads2 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
 
 /******************************************
 /* SERVICES SECTION
@@ -265,7 +276,7 @@ li > a{
 .svc {
   display: flex;
   flex-direction: column;
-  background-image: url("../img/churchhands.jpg");
+  background-image: url("../img/sunsetworship.jpeg");
   background-attachment: fixed; /* parallax effect */
   background-position: bottom;
   align-self: center;
@@ -332,6 +343,35 @@ li > a{
   margin-top: 1em;
 }
 
+/******************************************
+/* MEDIA & SERMONS SECTION
+/*******************************************/
+.media {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+}
+
+.media h1, h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.media h2 {
+  font-size: 1.5rem;
+}
+
+.mediabuttons {
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+
+
 
 /******************************************
 /* GIVING PAGE STYLES
@@ -341,6 +381,19 @@ li > a{
   background-image: url("../img/givingheroimg.jpg");
   height: 500px;
   margin-bottom: 10vh;
+}
+
+.givingtitle {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--color-main);
+  padding-top: 2.2vh;
+  padding-bottom: 2vh;
+}
+
+.givingways {
+  background-color: var(--color-main-sub);
+  padding-bottom: 2vh;
 }
 
 .givingway {
@@ -404,11 +457,33 @@ li > a{
 /* BIBLE STUDY PAGE STYLES
 /*******************************************/
 
-.bible {
+.dailyverse {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 3vh;
+}
+
+.dailyverse > .todayverse {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+
+
+.bibletitle {
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 3vh;
+  padding-bottom: 2vh;
+}
+
+/* .bible {
   background-image: url("../img/biblestudy.jpg");
   height: 500px;
   margin-bottom: 10vh;
-}
+} */
 
 .biblesections {
   margin-bottom: 40px;
@@ -422,23 +497,57 @@ li > a{
 /* CONTACT SECTION
 /*******************************************/
 
-.contact {
+/* .contact {
   display: flex;
   flex-direction: row;
   background-color: var(--color-brown);
   align-items: center;
 }
 
-.contact > div {
-  
+.contactways > div {
+  display: inline-block;
+} */
+
+.contact {
+  text-align: center;
+  background-color: var(--color-brown);
+  color: white;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+.contacttitle {
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding-bottom: 2vh;
+}
+
+/* Create three columns on larger screens */
+.contactways {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Style each column */
+.phone,
+.address,
+.facebook {
+  flex: 1;
+  text-align: center;
+  margin: 10px; /* Add spacing between columns */
 }
 
 
+/******************************************
+/* FOOTER STYLES
+/*******************************************/
 
 
 
 /******************************************
-/* MEDIA STYLES
+/* MOBILE/MEDIA STYLES
 /*******************************************/
 
 
@@ -455,7 +564,7 @@ li > a{
 
 /* CSS for cell phones */
 
-@media (max-width: 600px) { /* Adjust breakpoint as needed */
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
   .services {
     flex-direction: column;
   }
@@ -471,12 +580,32 @@ li > a{
 
 }
 
-@media (max-width: 769px) {
+@media (max-width: 1068px) {
   .tithesleft,
   .givingleft,
   .benevolenceleft {
     float: none;
     margin-right: 0;
     margin-bottom: 20px;
+  }
+}
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+  /* Stack the columns into a single column */
+  .contactways {
+    flex-direction: column;
+  }
+
+  .contactways img {
+    max-width: 75px;
+  }
+
+  /* Remove spacing between columns */
+  .phone,
+  .address,
+  .facebook {
+    margin: 0;
+    padding-bottom: 1.5vh;
   }
 }
